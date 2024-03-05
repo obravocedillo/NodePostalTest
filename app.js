@@ -1,5 +1,5 @@
 const express = require("express");
-var postal = require('node-postal');
+const postal = require('node-postal');
 
 const app = express();
 
