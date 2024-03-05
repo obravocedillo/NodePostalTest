@@ -9,7 +9,7 @@ app.get("/health", (req, res) => {
     res.status(200).send('Working');
 });
 
-app.post("/expand", async (req, res) => {
+app.get("/expand", async (req, res) => {
     const { address } = req.query;
 
     const expandedAddress = postal.expand.expand_address('V XX Settembre, 20');
@@ -17,7 +17,7 @@ app.post("/expand", async (req, res) => {
     res.status(200).send(expandedAddress);
 });
 
-app.post("/parse", async (req, res) => {
+app.get("/parse", async (req, res) => {
     const { address } = req.query;
 
     const parsedAddress = postal.parser.parse_address('V XX Settembre, 20');
